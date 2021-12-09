@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+}
+h1{
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+/* div is a container for a grid and having 3 columns for a large screen */
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+section {
+    background-color: slategrey;
+    border: solid black;
+    margin: 10px 10px;
+}
+
+/* floating the h2 headings to be on the top-right corner of section */
+h2 {
+    font-size: 1.25rem;
+    float: right;
+    border: solid black;
+    border-top: 0ch;
+    border-right: 0cm;
+    padding: 0px 20px;
+    margin-top: 0;
+}
+
+/* Having different colors for h2 background */
+.chicken > h2{
+    background-color: red;
+}
+.beef > h2{
+    background-color: royalblue;
+}
+.sushi > h2{
+    background-color: chartreuse;
+}
+
+p{
+    clear: both;
+   padding: 0px 5px;
+}
+
+/* Layout: In the tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .sushi{
+        grid-column: 1/3;
+    }
+}
+
+/* Layout: In the mobile view */
+@media (max-width: 767px) {
+    div{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
